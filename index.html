@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Product Feedback Survey</title>
+</head>
+<h1 style="color: #FF5733;">Product Feedback Survey</h1>
+
+  <div class="container">
+    <form id="surveyForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <fieldset>
+        <legend>Rate the product (1-5):</legend>
+        <label><input type="radio" name="rating" value="1" required> 1</label>
+        <label><input type="radio" name="rating" value="2"> 2</label>
+        <label><input type="radio" name="rating" value="3"> 3</label>
+        <label><input type="radio" name="rating" value="4"> 4</label>
+        <label><input type="radio" name="rating" value="5"> 5</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Product Features you liked:</legend>
+        <label><input type="checkbox" name="feature" value="design"> Design</label>
+        <label><input type="checkbox" name="feature" value="performance"> Performance</label>
+        <label><input type="checkbox" name="feature" value="usability"> Usability</label>
+      </fieldset>
+
+      <label for="category">Favorite Product Category:</label>
+      <select id="category" name="category">
+        <option value="electronics">Electronics</option>
+        <option value="clothing">Clothing</option>
+        <option value="home">Home</option>
+      </select>
+
+      <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+
+    <div id="confirmation" style="display:none;">
+      <p>Thank you for your feedback!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
